@@ -13,10 +13,10 @@ export class EmailController {
         try {
             await this.emailService.send(email);
             console.log('POST /message/email => Email successfully sent!');
-            res.status(HttpStatus.CREATED).json();
+            res.status(HttpStatus.CREATED).send();
         } catch(err) {
             console.log(err.message);
-            res.status(HttpStatus.NOT_ACCEPTABLE).json();
+            res.status(HttpStatus.NOT_ACCEPTABLE).send(err);
         }
     }
 
