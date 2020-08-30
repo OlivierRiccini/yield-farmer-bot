@@ -10,8 +10,9 @@ export class EmailService {
     constructor() {
         this.transporter = nodemailer.createTransport({
             host: MAILGUN_HOST,
-            port: 465,
-            secure: true, // true for 465, false for other ports
+            port: 587,
+            secure: false, // true for 465, false for other ports
+            ignoreTLS: true, // add this
             auth: {
               user: MAILGUN_USERNAME,
               pass: MAILGUN_KEY
