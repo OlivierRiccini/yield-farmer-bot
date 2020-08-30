@@ -12,7 +12,9 @@ export class EmailService {
             host: MAILGUN_HOST,
             port: 587,
             secure: false, // true for 465, false for other ports
-            ignoreTLS: true, // add this
+            tls: {
+                ciphers:'SSLv3'
+            },
             logger: true,
             debug: true,
             auth: {
