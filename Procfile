@@ -1,1 +1,1 @@
-web: NODE_ENV=production node dist/main
+web: NODE_ENV=production NPM_CONFIG_PRODUCTION=false npm run start:prod
