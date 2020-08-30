@@ -16,4 +16,5 @@ switch (process.env.NODE_ENV) {
 dotenv.config({ path: path });
 
 export const MAILGUN_USERNAME = process.env.MAILGUN_USERNAME;
-export const MAILGUN_KEY = process.env.MAILGUN_KEY;
+export const MAILGUN_KEY = process.env.MAILGUN_KEY; 
+export const MAILGUN_HOST = process.env.MAILGUN_HOST;

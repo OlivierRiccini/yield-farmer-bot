@@ -2,7 +2,6 @@ import { Controller, Post, Body, Res, HttpStatus } from '@nestjs/common';
 import { EmailService } from 'src/services/email/email.service';
 import { IEmail } from 'src/models/email';
 import { Response } from 'express';
-import { MAILGUN_USERNAME } from 'src/utils/config';
 
 @Controller('email')
 export class EmailController {

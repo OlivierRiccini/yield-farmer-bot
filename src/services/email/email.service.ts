@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import nodemailer = require('nodemailer');
 import { IEmail } from 'src/models/email';
-import * as mailGun from 'nodemailer-mailgun-transport';
-import { MAILGUN_USERNAME, MAILGUN_KEY } from 'src/utils/config';
+import { MAILGUN_USERNAME, MAILGUN_KEY, MAILGUN_HOST } from 'src/utils/config';
 
 @Injectable()
 export class EmailService {
@@ -10,7 +9,7 @@ export class EmailService {
 
     constructor() {
         this.transporter = nodemailer.createTransport({
-            host: "smtp.mailgun.org",
+            host: MAILGUN_HOST,
             port: 587,
             secure: false, // true for 465, false for other ports
             auth: {
