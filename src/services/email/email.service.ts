@@ -13,6 +13,8 @@ export class EmailService {
             port: 587,
             secure: false, // true for 465, false for other ports
             ignoreTLS: true, // add this
+            logger: true,
+            debug: true,
             auth: {
               user: MAILGUN_USERNAME,
               pass: MAILGUN_KEY

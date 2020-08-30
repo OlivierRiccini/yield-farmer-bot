@@ -15,8 +15,8 @@ export class EmailController {
             console.log('POST /message/email => Email successfully sent!');
             res.status(HttpStatus.CREATED).send();
         } catch(err) {
-            console.log(err.message);
-            res.status(HttpStatus.NOT_ACCEPTABLE).send(err);
+            console.log('POST /message/email => Error message not sent! ', err.message);
+            res.status(err.status).send(err);
         }
     }
 
