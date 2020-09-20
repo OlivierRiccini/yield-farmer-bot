@@ -16,3 +16,5 @@ switch (process.env.NODE_ENV) {
 dotenv.config({ path: path });
 
 export const RPC_URL = process.env.RPC_URL;
+export const WALLET_PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
+export const ETH_ADDRESS = process.env.ETH_ADDRESS;
